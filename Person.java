@@ -3,9 +3,12 @@ public class Person extends NameHolder
 {
 	private String lastName;
 	
-	public Person()
+	public Person() throws NameException
 	{
-		
+		String temp1 = "Bob";
+		String temp2 = "Alex";
+		lastName = temp1;
+		super.setFirstName(temp2);
 	}
 	
 	public Person(String firstName, String lastName) throws NameException
