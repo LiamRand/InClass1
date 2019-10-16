@@ -77,6 +77,20 @@ public class StudentTest
 	}
 	
 	@Test
+	public void testCompare() throws NameException
+	{
+		Student firstStudent = new Student("A", "B", 2);
+		Student secondStudent = new Student("A", "C", 3);
+		Student thirdStudent = new Student("A", "A", 5);
+		Student fourthStudent = new Student("Z", "", 3);
+		Student fifthStudent = new Student("X", "", 3);
+		
+		CompareLastFirstName clfn = new CompareLastFirstName();
+		
+		clfn.compare(firstStudent, secondStudent);
+	}
+	
+	@Test
 	public void testGet() throws NameException
 	{
 		int expected = 4;
